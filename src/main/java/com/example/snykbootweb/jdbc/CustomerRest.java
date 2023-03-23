@@ -28,4 +28,12 @@ public class CustomerRest {
     public List<Customer> getAllCustomersByLastName(@PathVariable String lastName) {
         return customerService.getAllByLastName(lastName);
     }
+
+    /*
+    @GetMapping(produces = "application/json", path = "/all/withfix/{lastName}")
+    public List<Customer> getAllCustomersByLastNameFixed(@PathVariable String lastName) {
+        return customerService.getAllByLastNameFixed(lastName);
+    }
+    */
+
 }

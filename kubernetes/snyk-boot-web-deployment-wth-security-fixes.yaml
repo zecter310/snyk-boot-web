@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: snyk-boot-web
+  name: snyk-boot-web-v2
   namespace: pears
 spec:
   selector:
     matchLabels:
-      app: snyk-boot-web
+      app: snyk-boot-web-v2
   replicas: 1
   template:
     metadata:
       labels:
-        app: snyk-boot-web
+        app: snyk-boot-web-v2
     spec:
       containers:
-        - name: snyk-boot-web
+        - name: snyk-boot-web-v2
           image: pasapples/snyk-boot-web:v2
           imagePullPolicy: Always
           ports:
