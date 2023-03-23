@@ -65,7 +65,10 @@ public class CustomerService {
         return customers;
     }
 
-    /* ORIGINAL SQLi issue
+    /*
+
+    ORIGINAL SQLi issue
+
     public List<Customer> getAllByLastName (String lastName) {
         List<Customer> customers = jdbcTemplate.query(
                 "SELECT id, first_name, last_name FROM customers WHERE last_name = '" + lastName + "'",
@@ -75,6 +78,19 @@ public class CustomerService {
 
         return customers;
     }
+
+    WITH FIX
+
+    public List<Customer> getAllByLastName (String lastName) {
+    List<Customer> customers = jdbcTemplate.query(
+            "SELECT id, first_name, last_name FROM customers WHERE last_name = ?",
+            (rs, rowNum) -> new Customer((int) rs.getLong("id"),
+                                               rs.getString("first_name"),
+                                               rs.getString("last_name")), String.class, lastName);
+
+    return customers;
+    }
+
     */
 
 }
