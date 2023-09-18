@@ -36,4 +36,10 @@ public class CustomerRest {
     }
     */
 
+    /* TO REMOVE
+    @GetMapping(produces = "application/json", path = "/all/withfix/{lastName}")
+    public List<Customer> getAllCustomersByLastNameFixed(@PathVariable String lastName) {
+        return customerService.getAllByLastNameFixed(lastName);
+    }
+    */
 }
