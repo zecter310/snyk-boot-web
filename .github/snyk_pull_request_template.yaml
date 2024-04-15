@@ -1,4 +1,4 @@
-title: This PR fixes {{ issue_count }} issues
+title: This PR fixes {{ issue_count }} issues thanks to snyk
 commitMessage: "fix: {{ issue_count }} Snyk issues"
 description: |
   It updates {{ package_name }} from version {{ package_from }} to version {{ package_to }}.
