@@ -1,7 +1,6 @@
-title: This PR fixes {{ issue_count }} issues
+title: This PR fixes {{ issue_count }} issues pas
 commitMessage: "fix: {{ issue_count }} Snyk issues"
 description: |
   It updates {{ package_name }} from version {{ package_from }} to version {{ package_to }}.
   Review relevant docs for possible breaking changes.
-  
   To find more details, see the Snyk project [{{ snyk_project_name }}]({{ snyk_project_url }})
