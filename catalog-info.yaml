@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Snyk Spring Demo
+  description: The world's most critical application
+  labels:
+    example.com/custom: custom_label_value
+  title: Snyk Spring Demo
+  tags:
+    - Java
+    - api
+    - web
+    - apples_app
+  links:
+    - url: https://demo-fake.io/
+      title: Snyk Spring Demo by Pas
+      icon: Blender
+      type: website
+spec:
+  type: website
+  lifecycle: production
+  owner: papicella
+  system: public-websites
