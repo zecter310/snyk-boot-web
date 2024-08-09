@@ -14,11 +14,6 @@ public class CustomerRest {
         this.customerService = customerService;
     }
 
-    @GetMapping(produces = "application/json", path = "/all/{lastName}")
-    public List<Customer> getAllCustomersByLastName(@PathVariable String lastName) {
-        return customerService.getAllByLastName(lastName);
-    }
-
     @GetMapping ("/count")
     public int getCount() {
         return customerService.countCustomers();
@@ -27,6 +22,11 @@ public class CustomerRest {
     @GetMapping(produces = "application/json", path = "/all")
     public List<Customer> getAllCustomers() {
         return customerService.getAll();
+    }
+
+    @GetMapping(produces = "application/json", path = "/all/{lastName}")
+    public List<Customer> getAllCustomersByLastName(@PathVariable String lastName) {
+        return customerService.getAllByLastName(lastName);
     }
 
     /*
