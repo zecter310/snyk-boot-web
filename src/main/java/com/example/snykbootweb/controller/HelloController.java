@@ -14,6 +14,6 @@ public class HelloController {
     @GetMapping ("/")
     public String sayHello () {
         String password = databaseService.getPassword();
-        return "hello world web app for snyk springboot jdbc demo";
+        return "hello world web app for snyk springboot jdbc demo, password = " + password;
     }
 }

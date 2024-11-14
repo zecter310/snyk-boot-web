@@ -6,6 +6,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/customer")
+@CrossOrigin("*")
 public class CustomerRest {
 
     CustomerService customerService;
